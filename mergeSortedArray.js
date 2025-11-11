@@ -37,3 +37,13 @@ var merge = function(nums1, m, nums2, n) {
     }
     nums1.sort((a, b) => a - b)
 };
+
+// Solution 2: Two Pointer
+// Traverse through nums2 and append its elements to the end of nums1 starting from index m
+function merge(nums1, m, nums2, n) {
+    for(let i = m, j = 0; j < n; i++, j++) {
+        // replace the placeholder item with the nums2 item
+        nums1[i] = nums2[j];
+    };
+    nums1.sort((a, b) => a - b);
+};
